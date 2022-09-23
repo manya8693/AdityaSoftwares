@@ -6,36 +6,45 @@
      <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <title>@ViewData["Title"] - AdityaSoftwares</title>
+    <title>@ViewData["Title"] - Aditya Softwares</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-     <link rel="stylesheet" href="~/assets/bootstrap/dist/css/bootstrap-icons.css" />
+     <link rel="stylesheet" href="~/lib/icons/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AdityaSoftwares.styles.css" asp-append-version="true" />
     <link href='~/assets/boxicons/css/boxicons.min.css' rel='stylesheet'/>
-   
-    @* <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />*@
     <link rel="stylesheet" href="~/assets/glightbox/css/glightbox.css" />
     <link rel="stylesheet" href="~/assets/fonts/remixicon.css"/>
     <link rel="stylesheet" href="~/assets/aos/aos.css"/>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow ">
+        <nav id="navbar" class="navbar navbar-expand-sm ">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AdityaSoftwares</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#clps" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                    
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+
+                <div class="navbar-collapse collapse  justify-content-between" id="clps">
                     <ul>
                         <li>
                             <a class="nav-link scrollto active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
                         <li>
-                            <a class="nav-link scrollto" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link scrollto" href="#services">Services</a>
                         </li>
+                        <li>
+                            <a class="nav-link scrollto" href="#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="nav-link scrollto" href="#contact">Contact Us</a>
+                        </li>
+
+
                     </ul>
                 </div>
             </div>
@@ -58,11 +67,11 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Aditya Softwares</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Sathiaon ward no:8 <br>
+              Fazilnagar Kushinagr<br>
+              Up India <br><br>
+              <strong>Phone:</strong> +91 9172802123<br>
+              <strong>Email:</strong> mrv8693@gmail.com<br>
             </p>
           </div>
 
@@ -72,8 +81,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+             
             </ul>
           </div>
 
@@ -90,7 +98,7 @@
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <p>You can reach us through these social platforms also. Let's conect !!</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -113,6 +121,8 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+ 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -122,12 +132,7 @@
 
     @await RenderSectionAsync("Scripts", required: false)
     <script>
-    AOS.init({
- 
-  duration: 800,
-  easing: 'ease-in-quad',
-  
-});
+    AOS.init();
  
     </script>
 </body>

@@ -19,11 +19,52 @@ body {
     
 }
 
+.offer{
+    color: yellow;
+}
+.offers {
+    color:white;
+   
+}
 #success{
 
     color:forestgreen;
     margin-top:1px;
 }
+
+*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #47b2e4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #6bc1e9;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -126,10 +167,14 @@ section {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: transparent;
-    /* border: 1px solid transparent; */
+    /*background-color: transparent;
+     border: 1px solid transparent; */
     border-radius: 0.25rem;
     transition: box-shadow .15s ease-in-out;
+    color:white;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar {
@@ -156,7 +201,7 @@ section {
         padding: 10px 0 10px 30px;
         font-size: 15px;
         font-weight: 500;
-        color: #fff;
+        color:white;
         white-space: nowrap;
         transition: 0.3s;
     }
@@ -186,11 +231,12 @@ section {
         font-weight: 600;
     }
 
-        .navbar .getstarted:hover,
+   
+       /* .navbar .getstarted:hover,
         .navbar .getstarted:focus:hover {
             color: #fff;
             background: #31a9e1;
-        }
+        }*/
 
 
 /*--------------------------------------------------------------
@@ -205,9 +251,7 @@ section {
         animation: up-down 2s ease-in-out infinite alternate-reverse both;
     }
 
-    #hero .container {
-        padding-top: 72px;
-    }
+   
 
     #hero h1 {
         margin: 0 0 10px 0;
@@ -958,5 +1002,19 @@ section {
     #hero .btn-get-started {
         font-size: 16px;
         padding: 10px 24px 11px 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items:flex-start;
     }
 }

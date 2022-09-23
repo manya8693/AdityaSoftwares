@@ -36,8 +36,8 @@ namespace AdityaSoftwares.Models
                 client.EnableSsl = true;
                 client.UseDefaultCredentials = false;
                  
-                client.Credentials = new NetworkCredential("cecil58@ethereal.email", "XkXPezNxWY6h8J9381");
-                    //client.Credentials = new NetworkCredential("adityasoftwares256@gmail.com", "manya@8693");
+               // client.Credentials = new NetworkCredential("cecil58@ethereal.email", "XkXPezNxWY6h8J9381");
+                    client.Credentials = new NetworkCredential("adityasoftwares256@gmail.com", "manya@8693");
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                
                 
