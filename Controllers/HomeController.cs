@@ -7,7 +7,7 @@ namespace AdityaSoftwares.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        IEmailService _emailService = null;
+        IEmailService _emailService;
         public HomeController(ILogger<HomeController> logger, IEmailService emailService)
         {
             _logger = logger;
